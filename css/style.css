@@ -1,0 +1,42 @@
+
+
+img{width: 100%;}
+.div_1{background-image: url(../img/1.jpg);height: 400px;background-repeat: no-repeat;background-size: cover;}
+.h_1{color: yellow;margin-top: 70px ;}
+.P_1{color: white;}
+.a_1{color: yellow;border: 2px solid yellow;text-decoration: none;padding: 10px 85px;}
+.h_2,.p_2{text-align: center;}
+.img_1{border-radius: 50%;border: 2px solid yellow;height: 150px; width: 150px;}
+.div2{text-align: center;}
+.div3{background-color: black;}
+.div4{text-align: center;margin-bottom: 20px;margin-top: 30px;}
+.h2_1{color: yellow;margin-top: 30px;}
+.div5,.div5_1{color: white;margin-top: 30px;}
+.p_5{margin-bottom: 0px;}
+.p_6{margin-top: 0px;}
+.img_2{height: 590px;}
+.div_2{text-align: center;}
+.div_3{margin-top: 50px;margin-bottom: 50px;}
+.div_4{margin-bottom: 30px;}
+.div6,.div6_1{color: white;margin-top: 30px;}
+.p_7{margin-top: 30px;}
+.div_2_1{width: 100%;}
+.div8{border-bottom: 2px solid white;}
+@media (max-width: 575.98px)
+ { 
+    
+}
+
+@media (min-width: 100px) and (max-width: 767.98px)
+ {
+.div_2_1
+ {
+    width: 50%;
+    margin-bottom: 10px;
+} 
+}
+
+@media (min-width: 100px) and (max-width: 399.98px)
+{
+    .div_1{height: 650px;}
+}
