@@ -190,13 +190,13 @@ a:hover{ color: black;}
   .new{  position: absolute; top: 0px; left: 0; right: 0; 
     opacity: 0;}
 .div_34{background-color: green;border-radius: 60%;font-size: 25px;color: white;padding: 4px;}
-.pro, .ovr{overflow: hidden;}
-.div_55{margin-top: 25px;}
-.div_56{margin-bottom: 20px;}
+.pro, .ovr{overflow: hidden;margin-top: 0%;}
+.div_55{margin-top: 30px;}
+
     .pro:hover .no {  
       opacity: 0; }
     .pro:hover .new { 
-      opacity: 1; top: -30px; left: 0; right: 0; position: absolute; padding-top: 10px; }
+      opacity: 1; top: -27px; left: 0; right: 0; position: absolute; padding-top: 10px; }
 	  .bi bi-list{
 		font-size: 50px !important;}
       iconify-icon{font-size: 45px;}
