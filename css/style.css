@@ -1,0 +1,17 @@
+img{width: 100%;}
+.div_3{margin-top: 40px;}
+.img_3{border-radius: 50%;border: 2px solid black;height: 120px; }
+.but{color: white;background-color: red;}
+.h2_1{font-style: italic;color: darkgray;}
+.img_4{height: 450px;}
+.div_4{margin-top: 30px;}
+.img_5{height: 150px; }
+.p_2{margin-bottom: 0px;color: darkgray;}
+.p_3{margin-top: 0px;color: darkgray;}
+.p_1{color: darkgray;}
+.p_0{color: white;}
+
+@media (min-width:100px) and (max-width:767.98px){
+    .div_im{text-align: center;}
+   
+}
