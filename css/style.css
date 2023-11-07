@@ -1,6 +1,6 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
@@ -497,4 +497,38 @@
       }
   }
 
+  .container_1{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    margin-top: 30px;
+    justify-content: space-evenly;
+    margin-left: 50px;
+  }
+
+  .img1{
+    border-radius: 15%;
+    width: 80%;
+
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1); 
+  }
+
+  .img1:hover{
+    box-shadow: 0px 0px 10px #444;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+  }
 
