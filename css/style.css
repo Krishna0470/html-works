@@ -275,9 +275,30 @@
 .container1{
     margin-top: 30px;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-areas: 'd1 img3_1';
     justify-content: space-around;
 }
+
+@media(max-width:1023px){
+    .undo_1{
+        display: none;
+    } 
+    .container1{
+        grid-template-areas: 'img3_1' 'd1';
+        margin-bottom: 0%;
+    }
+    .text_2{
+        text-align: center;
+    }
+    .dd_1{
+    
+
+    }
+  
+}
+
+
+
 .but2{
     background: rgb(71, 132, 255);
     color:white;
@@ -287,15 +308,22 @@
     padding: 10px;
     margin-top: 20px;
 }
-.img3{
+
+.img3_1{
     width: 100%;
-    order: 2;
+  
     height: 450px;
+    grid-area: img3_1;
 }
-.dd{
-    order: 1;
+
+
+
+.dd_1{
+    
     margin-left: 70px;
+    grid-area: d1;
 }
+
 .text2_0{
     margin-top: 40px;
 }
@@ -312,7 +340,7 @@
     color: gray;
     margin-top: 20px;
 }
-.text-2-0{
+.text_2_0{
     color: gray;
 }
 
@@ -416,7 +444,7 @@
       position: relative;
       display: block;
       flex: 1 0 100%;
-      width: 100%;
+      width: 50%;
       height: 100%;
       overflow: hidden;
       transition: all 300ms ease-out;
@@ -457,6 +485,27 @@
       &.scrollable {
           overflow-y: scroll;
       }
+  }
+
+  @media(max-width:786px){
+    .labe1{
+        width: 70%;
+    }
+    .labe2{
+        width: 70%;
+    }
+    .labe3{
+        width: 70%;
+    }
+    .labe4{
+        width: 70%;
+    }
+    .labe5{
+        width: 70%;
+    }
+    .labe6{
+        width: 70%;
+    }
   }
   
   .carousel__thumbnails {
@@ -697,13 +746,93 @@ p {
 .container-fluid6{
     background-color: black;
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-areas: 'img1 img2 img3 img4 img5 img6' 'img7 img8 img9 img10 img11 img12';
 }
 
-.img2{
+.img_1{
     width: 55%;
     border-radius: 20px;
+    grid-area: img1;
+    margin-left: 35px;
 }
+
+.img_2{
+    width: 55%;
+    border-radius: 20px;
+    grid-area: img2;
+    margin-left: 35px;
+}
+
+.img_3{
+    width: 55%;
+    border-radius: 20px;
+    grid-area: img3;
+    margin-left: 35px;
+}
+
+.img_4{
+    width: 55%;
+    border-radius: 20px;
+    grid-area: img4;
+    margin-left: 35px;
+}
+
+.img_5{
+    width: 55%;
+    border-radius: 20px;
+    grid-area: img5;
+    margin-left: 35px;
+}
+
+.img_6{
+    width: 55%;
+    border-radius: 20px;
+    grid-area: img6;
+    margin-left: 35px;
+}
+
+.img_7{
+    width: 55%;
+    border-radius: 20px;
+    grid-area: img7;
+    margin-left: 35px;
+}
+
+.img_8{
+    width: 55%;
+    border-radius: 20px;
+    grid-area: img8;
+    margin-left: 35px;
+}
+
+.img_9{
+    width: 55%;
+    border-radius: 20px;
+    grid-area: img9;
+    margin-left: 35px;
+}
+
+.img_10{
+    width: 55%;
+    border-radius: 20px;
+    grid-area: img10;
+    margin-left: 35px;
+}
+
+.img_11{
+    width: 55%;
+    border-radius: 20px;
+    grid-area: img11;
+    margin-left: 35px;
+}
+
+.img_12{
+    width: 55%;
+    border-radius: 20px;
+    grid-area: img12;
+    margin-left: 35px;
+}
+
 .pp1{
     color: white;
     margin-top: 0%;
@@ -715,7 +844,7 @@ p {
     justify-content: center;
     margin-bottom: 30PX;
 }
-.img2:hover{
+.img_1:hover{
     box-shadow: 0px 0px 10px #444;
     z-index: 2;
     -webkit-transition: all 200ms ease-in;
@@ -728,11 +857,166 @@ p {
     transform: scale(1.1);
 }
 
-.container-fluid7{
-    background-color:cornflowerblue;
-    display: grid;
-    grid-template-columns: auto auto;
+.img_2:hover{
+    box-shadow: 0px 0px 10px #444;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
 }
+
+.img_3:hover{
+    box-shadow: 0px 0px 10px #444;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+
+.img_4:hover{
+    box-shadow: 0px 0px 10px #444;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+
+.img_5:hover{
+    box-shadow: 0px 0px 10px #444;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+
+.img_6:hover{
+    box-shadow: 0px 0px 10px #444;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+
+.img_7:hover{
+    box-shadow: 0px 0px 10px #444;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+
+.img_8:hover{
+    box-shadow: 0px 0px 10px #444;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+
+.img_9:hover{
+    box-shadow: 0px 0px 10px #444;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+
+.img_10:hover{
+    box-shadow: 0px 0px 10px #444;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+
+.img_11:hover{
+    box-shadow: 0px 0px 10px #444;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+
+.img_12:hover{
+    box-shadow: 0px 0px 10px #444;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+
+@media (max-width:786.98px){
+    .container-fluid6{
+        grid-template-areas: 'img1 img2 img3' 'img4 img5 img6' 'img7 img8 img9' 'img10 img11 img12';
+    } 
+}
+
+
+.container-fluid7{
+    background-color:rgb(25, 95, 226);
+    display: grid;
+    grid-row: 'bg1' 'bg2';
+}
+
+.bg_1{
+    grid-area: bg1;
+}
+
 .bgg1{
     color: white;
     margin-left: 60px;
@@ -764,28 +1048,49 @@ p {
 .b1{
     height: 500px;
     width: 100%;
+    grid-area: bg2;
     
 }
 
+
+
 .container-fluid8{
-    background-color: rgb(23, 68, 152);
+    background-color: rgb(25, 95, 226);
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-areas: 'gam_1 gam_2 gam_3';
 }
-.gam{
+.gam_1{
     width: 70%;
     border-radius: 20px;
-    margin-left: 70px;
+    
+    grid-area: gam_1;
 }
+
+.gam_2{
+    width: 70%;
+    border-radius: 20px;
+    
+    grid-area: gam_2;
+}
+
+.gam_3{
+    width: 70%;
+    border-radius: 20px;
+   
+    grid-area: gam_3;
+}
+
 
 .gam1{
     color: white;
-    margin-left: 100px;
 }
 .gam2{
     color: white;
-    margin-left: 160px;
+
 }
+
+@media(max-width:)
+
 .gam:hover{
     box-shadow: 0px 0px 10px #444;
     z-index: 2;
