@@ -226,14 +226,28 @@
     
 .container-fluid2{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-areas: 'co1 co2';
     background-image: url(../img/spider-man-2-hero.22.webp);
     background-size: cover;
     height: 800px;
-    
+}
 
-    
-    
+
+@media(max-width:1022px){
+    .container-fluid2{
+        grid-template-areas: 'co1 co1';
+        justify-content: center;
+        background-image: url(../img/spider-man-2-hero__22.png);
+        
+    }
+}
+
+.co1{
+    grid-area: co1;
+    text-align: start;
+}
+.co2{
+    grid-area: co2;
 }
 
 .img2{
@@ -269,7 +283,11 @@
 }
 
 .pg_0{
-    margin-top: 20px;
+    margin-top: 20px;margin-bottom: 0%;
+}
+
+.pg{
+    margin-top: 0%;
 }
 
 .container1{
@@ -553,7 +571,7 @@
 
   .container_1{
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-areas: 'im1 im2 im3 im4 im5' ;
     margin-top: 30px;
     justify-content: space-evenly;
     margin-left: 50px;
@@ -562,7 +580,63 @@
   .img1{
     border-radius: 15%;
     width: 80%;
+    grid-area: im1;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1); 
+  }
 
+  .img2{
+    border-radius: 15%;
+    width: 80%;
+     grid-area: im2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1); 
+  }
+
+  .img3{
+    border-radius: 15%;
+    width: 80%;
+    grid-area: im3;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1); 
+  }
+
+  .img4{
+    border-radius: 15%;
+    width: 80%;
+    grid-area: im4;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1); 
+  }
+
+  .img1{
+    border-radius: 15%;
+    width: 80%;
+     grid-area: im5;
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1); 
     -ms-transition: all 200ms ease-in;
@@ -1013,6 +1087,23 @@ p {
     grid-row: 'bg1' 'bg2';
 }
 
+@media(max-width:766px){
+    .container-fluid7{
+        background-image: url(../img/new-mw3__3.png);
+        background-size: cover;
+        height: 550px;
+    }
+    .b1{
+        display: none;
+    }
+    .undo_2{
+        display: none;
+    }
+    .but3{
+        display: none;
+    }
+}
+
 .bg_1{
     grid-area: bg1;
 }
@@ -1058,40 +1149,62 @@ p {
     background-color: rgb(25, 95, 226);
     display: grid;
     grid-template-areas: 'gam_1 gam_2 gam_3';
+    
 }
+
+@media(max-width:387px){
+    .container-fluid8{
+        grid-template-areas: 'gam_1' 'gam_2' 'gam_3';
+    }
+    .gam_1,.gam1{
+        margin-left: 50px;
+    }
+    .gam_2,.gam2{
+        margin-left: 50px;
+    }
+    .gam_3{
+        margin-left: 50px;
+    }
+
+}
+
+
 .gam_1{
     width: 70%;
     border-radius: 20px;
-    
+    margin-top: 50px;
     grid-area: gam_1;
+ 
 }
 
 .gam_2{
     width: 70%;
     border-radius: 20px;
-    
+    margin-top: 50px;
     grid-area: gam_2;
+   
 }
 
 .gam_3{
     width: 70%;
     border-radius: 20px;
-   
+    margin-top: 50px;
     grid-area: gam_3;
+    
 }
 
 
 .gam1{
     color: white;
+    
 }
 .gam2{
     color: white;
-
+    
 }
 
-@media(max-width:)
 
-.gam:hover{
+.gam_1:hover{
     box-shadow: 0px 0px 10px #444;
     z-index: 2;
     -webkit-transition: all 200ms ease-in;
@@ -1103,17 +1216,51 @@ p {
     transition: all 200ms ease-in;
     transform: scale(1.1);
 }
+
+.gam_2:hover{
+    box-shadow: 0px 0px 10px #444;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+
+.gam_3:hover{
+    box-shadow: 0px 0px 10px #444;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
+}
+
 .container-fluid9{
    display: grid;
-   grid-template-columns: auto auto;
+   grid-template-areas: 'play stor2';
    margin-top: 40px;
-   padding: 50px;
+ 
+}
+@media(max-width:1301px){
+    
+}
+
+.plays_1{
+    grid-area: play;
 }
 .stor1{
     margin-left: 100px;
 }
 .store1{
-    width: 30%;
+    width: 40%;
     margin-top: 50px;
     margin-left: 50px;
 }
@@ -1128,6 +1275,7 @@ p {
     width: 100%;
     border-radius: 20px;
     margin-left: 0%;
+    grid-area: stor2;
 }
 
 .but4{
