@@ -1,0 +1,118 @@
+.online{
+    background-color: rgb(154, 205, 50,0.8);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 25px;
+}
+
+#firstname{
+    width: 30%;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-left: 65px;
+}
+
+.fname{
+    margin-left: 75px;
+    margin-top: 30px;
+}
+
+#lastname{
+    width: 30%;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-left: 32px;
+}
+
+.lname{
+    margin-left: 50%;
+}
+
+#email{
+    width: 85%;
+    padding: 15px;
+    margin-left: 70px;
+    margin-bottom: 20px;
+}
+
+.email{
+    margin-left: 95px;
+}
+
+#password{
+    width: 85%;
+    padding: 15px;
+    margin-left: 70px;
+    margin-bottom: 20px;
+}
+
+.pass{
+    margin-left: 95px;
+}
+
+#username{
+    width: 85%;
+    padding: 15px;
+    margin-left: 70px;
+    margin-bottom: 20px;
+}
+
+.user{
+    margin-left: 95px;
+}
+
+#place{
+    width: 85%;
+    padding: 15px;
+    margin-left: 70px;
+    margin-bottom: 20px;
+}
+
+.place{
+    margin-left: 95px;
+}
+
+#phonenumber{
+    width: 85%;
+    padding: 15px;
+    margin-left: 70px;
+    margin-bottom: 20px;
+}
+
+.phone{
+    margin-left: 95px;
+}
+
+#age{
+    width: 85%;
+    padding: 15px;
+    margin-left: 70px;
+    margin-bottom: 20px;
+}
+
+.age{
+    margin-left: 95px;
+}
+
+.img{
+    width: 10%;
+    
+}
+
+.bor{
+    text-align: center;
+}
+
+#submit{
+    margin-top: 30px;
+    width: 10%;
+    padding: 15px;
+    background-color:  rgb(154, 205, 50,0.8);
+    font-size: 20px;
+}
+
+#message{
+    text-align: center;
+    margin-top: 20px;
+}
