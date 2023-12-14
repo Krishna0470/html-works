@@ -1176,14 +1176,14 @@ function handledatas(datas){
 }
 
 {
-  //show t double of an array element using "map"
+  //show  double of an array element using "map"
 
   let arr1=[];
 
   function double(arr){
 
     const arr1= arr.map((item)=>{
-     return  [item,item];
+     return  [item*2];
     });
     console.log("Double:",arr1);
   }
@@ -1202,4 +1202,541 @@ function handledatas(datas){
     console.log("product:",arr1);
    }
    product([1, 2, 3, 4, 5]);
+  }
+
+  {
+    //write a function 'productPositive' that takes an array of numbers as input and uses the 'reduce' method to calculate the product of all posititve numbers in the array
+
+
+   function productPositive(arr){
+    const value= arr.reduce((total,item)=>{
+      if(item>0){
+        return total*item;
+      }else{
+        return total;
+      }
+    },1);
+    console.log("product positive:",value);
+   }
+   productPositive([-2,3,4,-5,10])
+  }
+
+
+  {
+
+    //1.Given an array of numbers, use the map method to create a new array where each number is doubled.
+   
+     function doublearr(arr){
+      const arrnew= arr.map((item)=>{
+        return  [item*2];
+       });
+       console.log("new array:",arrnew);
+     }
+     
+     doublearr([20,30,40]);
+
+  }
+
+  {
+
+    //2.Given an array of numbers, use the filter method to create a new array containing only the even numbers.
+
+
+    let newarr=[];
+    function filterarr(arr){
+      const newarr =arr.filter((item,index)=>{
+        return item%2==0;
+      });
+      console.log("Even Array:",newarr);
+    }
+    filterarr([1,2,3,4,5,6]);
+  }
+
+  {
+
+    //3.Given an array of numbers, use the reduce method to calculate the sum of all the numbers
+
+    let arr1=[];
+   function product(arr){
+    const arr1= arr.reduce((total,item)=>{
+      return total+item;
+    });
+    console.log("sum of array:",arr1);
+   }
+   product([1, 2, 3, 4, 5]);
+  }
+
+  {
+
+    //4.Given an array of numbers, use the reduce method to find the maximum value in the array.
+
+    function product(arr){
+      max=arr[0];
+     const arr1= arr.reduce((total,item)=>{
+       if(item > max){
+        return max = item;
+       }
+     });
+     console.log("maximum value in the array:",arr1);
+    }
+    product([2, 3, 4,8]);
+   
+  }
+
+  {
+
+    //5.Given an array of strings, use the map method to create a new array where each string is capitalized.
+
+    function string (arr){
+       const arrn = arr.map((item)=> {
+        return item. toLocaleUpperCase();
+       });
+       console.log(" capitalized array:",arrn);
+    }
+    string(["gokul","sabin","ashik",])
+  }
+
+  {
+
+    //6.Given an array of words, use the filter method to create a new array containing only the words with a length greater than a specified value.
+
+     function words(arr){
+      const wordarr=arr.filter(arr =>arr.length>5);
+      console.log("value:",wordarr)
+     }
+     words(["hari","sabin","krishna","gokul","aswinajith"]);
+  }
+ 
+  {
+
+    //7.Given an array of numbers, use the map method to create a new array of strings indicating whether each number is even or odd.
+
+    function num (arr){
+      const n=arr.map((item)=>{
+        if(item%2==0){
+          return "even";
+        }else{
+          return "odd";
+        }
+      });
+    
+      console.log("even or odd:",n);
+    }
+    num([1,2,3,4,5,6,7,8]);
+  }
+
+  {
+    // 8.Given an array, use the filter method to create a new array with only unique elements (remove duplicates).
+
+
+    function unique(arr){
+      const arr1=arr.filter((item,index)=>{
+        return arr.indexOf(item)==index;
+      });
+      console.log("Unique value",arr1);
+    }
+    unique([1,1,3,,4,4,5,6,5]);
+  }
+
+  {
+    //9.Given an array of numbers, use the sort method to sort them in ascending order.
+
+    function ascending(arr){
+      return arr.sort();
+    }
+    let arr1= ascending([5,1,7,3,9,6,2])
+    console.log("ascending order:",arr1);
+  }
+
+  {
+
+    //10.Given an array of objects with a name property, use the map method to create a new array containing only the names.
+
+    function name(arr){
+      const arr1= arr.map((item)=>{
+        return item.name;
+      })
+      console.log("names:",arr1);
+    }
+    name([{name:"arun",mark:30},{
+      name:"aswin",mark:50 },{
+        name:"gokul",mark:70}])
+  }
+
+  {
+
+    //count vowels in a string
+
+    var count = 0;
+function countVowels(str){
+    for(let i=0;i<str.length;i++){
+        if(str.charAt(i) == "a" || str.charAt(i) == "e" || str.charAt(i) == "i" || str.charAt(i) == "o" || str.charAt(i) == "u"){
+            count++;
+        }
+    }
+    return count;
+
 }
+let a=countVowels("helloworld");
+console.log("count of vowels : ",a);
+  }
+
+  {
+    console.log(this);
+
+let obj = {
+    name : "john",
+    getAge : function(){
+        console.log(this);
+    }
+}
+console.log(obj.name);
+console.log(obj.getAge());
+
+
+function greet(message,message1){
+    console.log("message : ",message);
+    console.log("message1 : ",message1);
+    console.log("this : ",this);
+    console.log("name : ",this.name);
+  }
+
+//   //call method
+// // greet.call(obj,"hello","hello1");
+
+
+// //bind method
+let boundGreet = greet.bind(obj,"hello","hello1");
+console.log("boundGreet : ",boundGreet);
+boundGreet();
+
+
+//apply method
+greet.apply(obj,["hello","hello1"]);
+
+ }
+
+ {
+  let obj = {
+    name : "Aswin",
+    age :50,
+    greeting : function () {
+        console.log("name : ",this.name);
+        console.log("age : ",this.age);
+    }
+
+}
+obj.greeting();
+
+ }
+
+
+ {
+  //constructor functions
+
+function Person(name,age){
+    this.name = name;
+    this.age = age;
+    this.greeting = function(){
+        console.log("name : ",this.name);
+        console.log("age : ",this.age);
+    }
+}
+const person1 = new Person("John",30);
+console.log("person1 : ",person1);
+person1.greeting();
+
+const person2 = new Person("Jane",25);
+console.log("person2 : ",person2);
+person2.greeting();
+
+//updating individual objects
+person2.place = "Ernakulam";
+console.log("Person2.place : ",person2.place);
+
+Person.prototype.getMark = function(){
+    return this.mark;
+}
+
+console.log("Mark of person1 : ",person1.getMark());
+console.log("Mark of person2 : ",person2.getMark());
+
+
+
+ }
+
+
+
+ {
+  
+
+let obj = {
+    name : "bmw",
+    color : "red",
+    greeting : function (){
+        console.log("name : ",this.name);
+        console.log("color : ",this.color);
+    }
+}
+console.log("obj : ",obj);
+obj.greeting();
+
+function Car(name,color){
+    this.name = name;
+    this.color = color;
+    this.greeting = function(){
+        console.log("name : ",this.name);
+        console.log("color : ",this.color);
+    }
+}
+
+const car1 = new Car("benz","black");
+console.log("Car1 : ",car1);
+car1.greeting();
+
+const car2 = new Car("Audi","red");
+console.log("Car2 : ",car2);
+car2.greeting();
+
+}
+
+
+
+{
+  //Using Classes
+
+  class Car{
+    name;
+    color;
+    year;
+
+
+    constructor(name, color, year){
+        this.name = name;
+        this.color = color;
+        this.year = year;
+       
+    }
+
+    greeting(){
+        console.log("name : ",this.name);
+        console.log("color : ",this.color);
+        console.log("year : ",this.year);
+      
+    }
+}
+
+class Racingcar extends Car{
+  speed;
+
+  constructor(name,color,year,speed){
+      super(name,color,year);
+      this.speed = speed;
+  }
+
+  greeting(){
+      console.log("speed : ",this.speed);
+  }
+}
+
+let car1 = new Car("swift","red",2014);
+console.log("car1  ",car1);
+car1.greeting();
+
+let car2 = new Car("Mustang","white",2000);
+console.log("car2 : ",car2);
+car2.greeting();
+
+let car3 = new Racingcar("ferrari","red",2008,250);
+console.log("car3 : ",car3);
+car3.greeting();
+}
+
+{
+  //Getters and Setters
+  class car{
+
+    constructor (name) {
+        this.name = name;
+    }
+
+    //without using setters and getters
+    //  setColor(color) {
+        // this.color = color;
+    // }
+
+    // getColor(){
+    //     return this.color;
+    // }
+
+
+    //using getters and setters
+    set setColor(color) {
+        this.color = color;
+    }
+
+    get getColor() {
+        return this.color;
+    }
+
+}
+
+let myCar = new car("Benz");
+
+//setting color
+//myCar.setColor("Green"); //Without using setter
+myCar.setColor = "Green"; //Using setter
+
+console.log("myCar : ",myCar);
+
+//Getting Color
+//console.log("Color of myCar : ",myCar.getColor()); //Without using getter
+console.log("Color of myCar : ",myCar.color); //Using getter
+
+}
+
+{
+
+class Button {
+
+    constructor(content) {
+        this.button = document.createElement('button');
+        this.button.innerHTML = content;
+        document.body.appendChild(this.button);
+    }
+
+    set width(width) {
+        this.button.style.width = width + "px";
+    }
+
+    set height(height) {
+        this.button.style.height = height + "px";
+    }
+
+    get width(){
+        return this.button.style.width;
+    }
+
+    get height(){
+        return this.button.style.height;
+    }
+
+    onClick(fn) {
+        this.button.onclick = fn;
+    }
+}
+
+let myButton = new Button('click here');
+console.log("myButton : ",myButton);
+
+myButton.width = 200;
+myButton.height = 50;
+
+console.log("Button width : ",myButton.width);
+console.log("Button height : ",myButton.height);
+
+myButton.onClick(function () {
+    console.log("My button clicked...");
+});
+
+
+class yellowButton extends Button{
+
+    //Method overriding
+    onClick(fn) {
+        this.button.onclick = function () {
+            this.button.style.background = "yellow";
+            fn();
+        }.bind(this);
+    }
+}
+
+let myYellowButton = new yellowButton("Yellow Button");
+console.log("myYellowButton : ",myYellowButton);
+
+
+myYellowButton.height = 50;
+myYellowButton.width = 200;
+
+console.log("myYellowButton width : ",myYellowButton.width);
+console.log("myYellowButton height : ",myYellowButton.height);
+
+myYellowButton.onClick(function (){
+    console.log("myYellowButton clicked");
+});
+
+}
+ 
+//class paragraph
+{
+
+  class Paragraph {
+  
+      constructor(content) {
+      this.paragraph = document.createElement('p');
+      this.paragraph.innerHTML = content;
+      document.body.appendChild(this.paragraph);
+      }
+  
+      set margin(margin) {
+          this.paragraph.style.margin = margin + "px";
+      }
+  
+      set padding(padding) {
+          this.paragraph.style.padding = padding + "px";
+      }
+  
+      set fontSize(fontSize) {
+          this.paragraph.style.fontSize = fontSize + "px";
+      } 
+  
+      set lineHeight(lineHeight) {
+          this.paragraph.style.lineHeight = lineHeight + "px";
+      }
+  
+  
+  }
+  
+  
+  let myParagraph = new Paragraph("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
+  // console.log("myParagraph : ",myParagraph);
+  
+  
+  myParagraph.margin = 30;
+  myParagraph.padding = 20;
+  myParagraph.fontSize = 20;
+  myParagraph.lineHeight = 50;
+  
+  
+  class Paragraph2 extends Paragraph {
+  
+      constructor(content,btncontent) {
+          super(content);
+          this.button = document.createElement('button');
+          this.button.innerHTML = btncontent;
+          document.body.appendChild(this.button);
+          
+      }
+  
+      set fontColor(fontColor) {
+          this.paragraph.style.color = fontColor;
+      }
+  
+      set background(background) {
+          this.paragraph.style.background = background;
+      }
+  }
+  
+  let myButton = new Paragraph2("click me");
+  
+  let newParagraph = new Paragraph2("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.");
+  
+  newParagraph.margin = 40;
+  newParagraph.padding = 30;
+  newParagraph.fontSize = 30;
+  newParagraph.lineHeight = 60;
+  newParagraph.fontColor = "red";
+  newParagraph.background = "yellow"; 
+  
+  
+  }
