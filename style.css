@@ -52,6 +52,16 @@ transition: color 0.3s ease-in-out;
 
 .navbar a:hover{
 color: #8cb333;
+box-shadow: 0px 0px 0px #444;
+z-index: 2;
+-webkit-transition: all 200ms ease-in;
+-webkit-transform: scale(1.1);
+-ms-transition: all 200ms ease-in;
+-ms-transform: scale(1.1);   
+-moz-transition: all 200ms ease-in;
+-moz-transform: scale(1.1);
+transition: all 200ms ease-in;
+transform: scale(1.1);
 }
 
 @media (max-width: 768px){
@@ -273,6 +283,16 @@ color: #8cb333;
 
 .icon2:hover,.icon1:hover{
     background-color: #94c328;
+    box-shadow: 0px 0px 10px #444;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1);
 }
 
 .addidas,.addidas1{
@@ -348,6 +368,18 @@ color: #8cb333;
     margin-left: 180px;
     margin-top: 30px;
 
+}
+.img04:hover,.img1:hover{
+  box-shadow: 0px 0px 10px #444;
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.1);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.1);   
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.1);
+  transition: all 200ms ease-in;
+  transform: scale(1.1);
 }
 
 @media (min-width: 100px) and (max-width: 767.98px) { 
