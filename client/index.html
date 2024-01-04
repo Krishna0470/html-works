@@ -3,51 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
     <title>registration</title>
 </head>
 <body>
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 
-form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-    box-sizing: border-box;
-}
-
-button {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-    </style>
-    <form class="form_1" action="submit_form.php" method="post">
+    <form class="form_1" action="/submit" method="post">
         <label class="label_1" for="first_name">First Name:</label>
         <input type="text" id="first_name" placeholder="First Name" name="first_name" required>
 
@@ -63,10 +24,9 @@ button {
         <label  class="label_1" for="password">Password:</label>
         <input type="password" id="password" placeholder="Password" name="password" required>
 
-        <button type="submit">Submit</button>
+        <button type="submit" value="sign up" >Submit</button>
     </form>
 
 <div id="message"></div>
-    <script src="script.js"></script>
 </body>
 </html>

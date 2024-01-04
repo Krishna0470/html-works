@@ -23,11 +23,13 @@ const server = http.createServer((req, res) => {
   const parsedUrl = url.parse(reqUrl);
   console.log("parsedUrl : ",parsedUrl);
 
-
-if(parsedUrl.pathname == '/'){
+//if url path is '/'(root path) server html
+if(parsedUrl.pathname === '/'){
   res.writeHead(200,{'content-Type' : 'text/html'});
-  res.end(fs.readFileSync('../client/index.html'))
-
+  res.end(fs.readFileSync('../client/index.html'));
+}else if(parsedUrl.pathname ==='/style.css'){
+  res.writeHead(200,{"Content-Type":'text/css'});
+  res.end(fs.readFileSync('../client/style.css'))
 }
 
 //handle from submission on POST Rrequest to /submit
@@ -84,6 +86,7 @@ async function connect(){
 
   })
   .catch((error)=>{
+    console.log("Data")
     console.log("Database error :",error.message?error.message:error);
   })
   .finally(()=>{
