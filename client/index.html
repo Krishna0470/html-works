@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Product list</title>
+</head>
+<body>
+
+
+    <form class="form_1" action="/submit" method="post">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" placeholder="Product Name" name="productName" required>
+
+        <label for="email_address">Email Address:</label>
+        <input type="email" id="email_address" placeholder="Email Address" name="email_address" required>
+
+        <label for="price">Phone Number:</label>
+        <input type="text" id="phone_number" placeholder="Phone Number" name="phone_number" required>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" placeholder="Price" name="price" required>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" placeholder="Quantity" name="quantity" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+<div id="message"></div>
+</body>
+</html>
