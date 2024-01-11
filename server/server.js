@@ -5,7 +5,7 @@ const url = require('url');
 const fs = require('fs');
 const queryString = require('querystring');
 const { error } = require('console');
-const {MongoClient}= require('mongodb');
+const {MongoClient,ObjectId}= require('mongodb');
 
 const client = new MongoClient("mongodb://127.0.0.1:27017");
 
@@ -98,6 +98,96 @@ if (req.method === 'GET' && parsedUrl.pathname === '/getData'){
 
   res.writeHead(200,{"Content-Type" : "text/json"});
   res.end(jsonFormData);
+}
+
+if (req.method === 'PUT' && parsedUrl.pathname === '/editData'){
+
+  let body="";
+
+  req.on('data',(chunks)=> {
+    console.log("chunks:",chunks);
+    body = body + chunks.toString();
+    console.log("body:",body);
+  });
+
+  req.on('end',async()=>{
+    let data= JSON.parse(body);
+
+    let finalData ={
+      first_name : data.first_name,
+      last_name : data.last_name,
+      username : data.username,
+      email_address : data.email_address,
+      password : data.password,
+    }
+    console.log("data :",data);
+
+    let id = data.id;
+    console.log("id :",id);
+    console.log("typeof(id) :",typeof(id));
+
+    let _id = new ObjectId(id);
+    console.log("_id :",_id);
+    console.log("typeof(_id) :", typeof(_id));
+
+    await collection.updateOne({_id},{$set : finalData})
+    .then((message)=> {
+      console.log("message :",message);
+      res.writeHead(200,{"Content-Type" : "text/plain"});
+      res.end("success");
+    })
+    .catch((error)=> {
+      console.log("error :",error);
+      res.writeHead(400,{"Content-Type" : "text/plain"});
+      res.end("failed");
+    })
+
+  })
+}
+
+if (req.method === 'POP' && parsedUrl.pathname === '/deleteData'){
+
+  let body="";
+
+  req.on('data',(chunks)=> {
+    console.log("chunks:",chunks);
+    body = body + chunks.toString();
+    console.log("body:",body);
+  });
+
+  req.on('end',async()=>{
+    let data= JSON.parse(body);
+
+    let finalData ={
+      first_name : data.first_name,
+      last_name : data.last_name,
+      username : data.username,
+      email_address : data.email_address,
+      password : data.password,
+    }
+    console.log("data :",data);
+
+    let id = data.id;
+    console.log("id :",id);
+    console.log("typeof(id) :",typeof(id));
+
+    let _id = new ObjectId(id);
+    console.log("_id :",_id);
+    console.log("typeof(_id) :", typeof(_id));
+
+    await collection.deleteOne({_id},{$set : finalData})
+    .then((message)=> {
+      console.log("message :",message);
+      res.writeHead(200,{"Content-Type" : "text/plain"});
+      res.end("deleted");
+    })
+    .catch((error)=> {
+      console.log("error :",error);
+      res.writeHead(400,{"Content-Type" : "text/plain"});
+      res.end("failed");
+    })
+
+  })
 }
 
 });
