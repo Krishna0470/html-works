@@ -116,7 +116,7 @@ if (req.method === 'PUT' && parsedUrl.pathname === '/editData'){
     let finalData ={
       first_name : data.first_name,
       last_name : data.last_name,
-      username : data.username,
+      username : data.username, 
       email_address : data.email_address,
       password : data.password,
     }
@@ -145,7 +145,7 @@ if (req.method === 'PUT' && parsedUrl.pathname === '/editData'){
   })
 }
 
-if (req.method === 'POP' && parsedUrl.pathname === '/deleteData'){
+if (req.method === 'DELETE' && parsedUrl.pathname === '/deleteData'){
 
   let body="";
 

@@ -119,9 +119,9 @@ async function handleSave(id){
 
 }
 
-function handleDelete(id){
-    async function handleDelete(id){
-        console.log("id:",id);
+
+async function handleDelete(id){
+     console.log("id:",id);
     
         let first_nameTag = document.getElementById(`first_name-${id}`);
         console.log("first_nameTag:",first_nameTag);
@@ -163,7 +163,7 @@ function handleDelete(id){
         console.log("jsonData:",jsonData);
     
         let response = await fetch('http://localhost:3000/deleteData',{
-            method : "POP",
+            method : "DELETE",
             headers : {
                 "Content-Type": "application/json",
             },
@@ -180,6 +180,5 @@ function handleDelete(id){
         }
     
     }
-}
 
 
