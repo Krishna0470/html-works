@@ -116,7 +116,7 @@ async function handleSave(id){
     }else  {
         alert ("Updation failed");
     }
-
+    getData();
 }
 
 async function handleDelete(id){
@@ -177,5 +177,5 @@ async function handleDelete(id){
        }else  {
            alert ("failed");
        }
-   
+       getData();
    }

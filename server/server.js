@@ -11,19 +11,19 @@ const client = new MongoClient("mongodb://127.0.0.1:27017");
 
 const server = http.createServer( async(req, res) => {
 
-  //acess the database and collections
-  const db =  client.db ('ums');
+ 
+  const db =  client.db ('ums12');
   const collection = db.collection("users");
  
-  //Get the req url
+ 
   const reqUrl = req.url;
   console.log("reqUrl : ",reqUrl);
 
-  //parse req url 
+
   const parsedUrl = url.parse(reqUrl);
   console.log("parsedUrl : ",parsedUrl);
 
-//if url path is '/'(root path) server html
+
 if(parsedUrl.pathname === '/'){
   res.writeHead(200,{'content-Type' : 'text/html'});
   res.end(fs.readFileSync('../client/index.html'));
@@ -45,22 +45,22 @@ if(parsedUrl.pathname === '/'){
 if(req.method === 'POST' && parsedUrl.pathname === '/submit'){
   let body='';
 
-  //collect data as it come in chunks
+
   req.on('data', (chunk)=> {
     console.log("chunks : ",chunk);
     console.log("chunk.toString() :", chunk.toString());
     body = body + chunk.toString();
-    //console.log("body :",body);
+    
   });
 
-//process the form data on end of request
+
 req.on('end',async()=> {
   console.log("body :",body);
   const formData = queryString.parse(body);
   console.log('forData :', formData);
 
 
-//do someting with submitted data
+
 console.log(`date_time : ${formData.date_time},
 top_priorities : ${formData.top_priorities},
 tasks : ${formData.tasks},
@@ -69,8 +69,6 @@ password : ${formData.for_tomorrow},
 `);
 
 
-//save to database
-//insert the data into collection
 await collection.insertOne(formData)
 .then((message)=> {
   console.log("Document inserted succesfully",message);
@@ -80,7 +78,7 @@ await collection.insertOne(formData)
   console.log("database iserted error :",error.message?error.message:error)
 })
 });
-//send a response
+
 res.writeHead(200,{'Content-Type' : 'text/plain'});
 res.end("form data submitted successfully!");
 
@@ -141,6 +139,8 @@ if (req.method === 'PUT' && parsedUrl.pathname === '/editData'){
       res.writeHead(400,{"Content-Type" : "text/plain"});
       res.end("failed");
     })
+
+    
 
   })
 }
