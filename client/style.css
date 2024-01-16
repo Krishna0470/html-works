@@ -48,7 +48,10 @@ a{
 table,tr,th,td{
     border: 2px solid black;
     border-collapse: collapse;
-    padding: 10px;
-    font-size: 30px;
-    background-color: bisque;
+    padding: 8px;
+    font-size: 25px;
+    background-color: rgb(238, 227, 211);
+}
+th{
+    font-family: 'Anton', sans-serif;
 }

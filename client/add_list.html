@@ -10,20 +10,18 @@
 
     <form class="form_1" action="/submit" method="post">
 
-        <label class="label_1" for="time">Date  Time:</label>
-        <input type="datetime-local" id="date_time" name="date_time">
+        <label class="label_1" for="time">Date:</label>
+        <input type="date" id="date" name="date">
+
+        <label  class="label_1" for="tasks">Time:</label>
+        <input type="time" id="time" placeholder="Time" name="time" required>
 
         <label class="label_1" for="top_priorities">Top Priorities:</label>
         <input type="text" id="top_priorities" placeholder="Top Priorities" name="top_priorities" required>
 
-        <label  class="label_1" for="tasks">Tasks:</label>
-        <input type="text" id="tasks" placeholder="Tasks" name="tasks" required>
-
         <label  class="label_1" for="daily_schedule">Daily Schedule:</label>
         <input type="text" id="tasks" placeholder="Daily Schedule" name="daily_schedule" required>
 
-        <label  class="label_1" for="for_tomorrow">For Tomorrow:</label>
-        <input type="text" id="for_tomorrow" placeholder="For Tomorrow" name="for_tomorrow" required>
 
 
         <button type="submit" value="sign up" >Submit</button>

@@ -61,11 +61,10 @@ req.on('end',async()=> {
 
 
 
-console.log(`date_time : ${formData.date_time},
+console.log(`date : ${formData.date},
+time : ${formData.time},
 top_priorities : ${formData.top_priorities},
-tasks : ${formData.tasks},
 daily_schedule : ${formData.daily_schedule},
-password : ${formData.for_tomorrow},
 `);
 
 
@@ -112,11 +111,10 @@ if (req.method === 'PUT' && parsedUrl.pathname === '/editData'){
     let data= JSON.parse(body);
 
     let finalData ={
-      date_time : data.date_time,
+      date : data.date,
+      time : data.time,
       top_priorities : data.top_priorities,
-      tasks : data.tasks,
       daily_schedule : data.daily_schedule,
-      for_tomorrow : data.for_tomorrow,
     }
     console.log("data :",data);
 
@@ -159,11 +157,10 @@ if (req.method === 'DELETE' && parsedUrl.pathname === '/deleteData'){
     let data= JSON.parse(body);
 
     let finalData ={
-      date_time : data.date_time,
+      date : data.date,
+      time : data.time,
       top_priorities : data.top_priorities,
-      tasks : data.tasks,
       daily_schedule : data.daily_schedule,
-      for_tomorrow : data.for_tomorrow,
     }
     console.log("data :",data);
 
