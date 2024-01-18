@@ -1,6 +1,6 @@
 async function getData(){
     console.log("Hello world");
-    let data = await fetch ('http://localhost:5000/getData');
+    let data = await fetch ('/getData');
     console.log("data :",data);
 
     let parsedData = await data.json();
@@ -55,6 +55,7 @@ function handleEdit(id){
     let password = document.getElementById(`password-${id}`);
     console.log("password:",password);
     password.disabled =false;
+
 
 }
 
@@ -117,6 +118,7 @@ async function handleSave(id){
         alert ("Updation failed");
     }
 
+    getData();
 }
 
 
@@ -178,6 +180,8 @@ async function handleDelete(id){
         }else  {
             alert ("failed");
         }
+
+        getData();
     
     }
 

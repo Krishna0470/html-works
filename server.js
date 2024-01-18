@@ -24,7 +24,7 @@ app.post('/submit',async (req,res)=>{
     console.log("reached here");
     console.log("req body :", req.body);
 
-    await collection.insertOne(req,body)
+    await collection.insertOne(req.body)
     .then((message)=> {
         console.log("Document inserted successfully :",message);
         res.status(201).send("Success");
@@ -36,9 +36,51 @@ app.post('/submit',async (req,res)=>{
 });
 
 app.get('/getData', async (req,res)=>{
-    const formData = collection.find
+    const formData = collection.find();
+    console.log("formData :", formData);
+
+    const formDataArr = await formData.toArray();
+    console.log("formDataArr :",formDataArr);
+
+    let jsonFormData = JSON.stringify(formDataArr);
+    console.log("jsonFormData :", jsonFormData);
+
+    res.status(200).send(jsonFormData);
 })
 
+app.put('/editData',async (req,res)=>{
+  let data = req.body;
+  console.log("data:",data);
+
+  let id = data.id;
+  console.log("id:",id);
+  console.log("typeof(id) :",typeof (id));
+  let _id = new ObjectId(id);
+  console.log("_id:",_id);
+  console.log("typeof(_id):",typeof(_id));
+
+  let updateData ={
+    first_name:data.first_name,
+    last_name:data.last_name,
+    username:data.username,
+    email_address:data.email_address,
+    password:data.password,
+  }
+
+
+  await collection.updateOne({_id},{$set : updateData})
+  .then((message)=>{
+    console.log("Document updated Successfully :",message);
+    res.status(200).send("success")
+  })
+  .catch((error)=>{
+    console.log("Document not updated:",error);
+    res.status(400).send("failed");
+  })
+
+});
+
+app.delete
 
 async function connect(){
     await client.connect()
