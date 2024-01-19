@@ -80,7 +80,37 @@ app.put('/editData',async (req,res)=>{
 
 });
 
-app.delete
+app.delete('/deleteData', async (req,res)=>{
+  let data = req.body;
+  console.log("data:",data);
+
+  let id = data.id;
+  console.log("id:",id);
+  console.log("typeof(id) :",typeof (id));
+  let _id = new ObjectId(id);
+  console.log("_id:",_id);
+  console.log("typeof(_id):",typeof(_id));
+
+  let deleteData ={
+    first_name:data.first_name,
+    last_name:data.last_name,
+    username:data.username,
+    email_address:data.email_address,
+    password:data.password,
+  }
+
+
+  await collection.deleteOne({_id},{$set : deleteData})
+  .then((message)=>{
+    console.log("Document deleted Successfully :",message);
+    res.status(200).send("success")
+  })
+  .catch((error)=>{
+    console.log("Document not deleted:",error);
+    res.status(400).send("failed");
+  })
+});
+
 
 async function connect(){
     await client.connect()
