@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>registration</title>
+</head>
+<body>
+
+    <form class="form_1" action="/submit" method="post">
+
+        <label class="label_1" for="time">Date:</label>
+        <input type="date" id="date" name="date">
+
+        <label  class="label_1" for="tasks">Time:</label>
+        <input type="time" id="time" placeholder="Time" name="time" required>
+
+        <label class="label_1" for="top_priorities">Top Priorities:</label>
+        <input type="text" id="top_priorities" placeholder="Top Priorities" name="top_priorities" required>
+
+        <label  class="label_1" for="daily_schedule">Daily Schedule:</label>
+        <input type="text" id="tasks" placeholder="Daily Schedule" name="daily_schedule" required>
+
+
+
+        <button type="submit" value="sign up" >Submit</button>
+    </form>
+
+<div id="message"></div>
+</body>
+</html>
