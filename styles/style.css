@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    min-height: 100vh;
+    color:black;
+}
+
+h2{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+.product{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,auto));
+    grid-gap: 50px;
+    margin: 50px auto;
+    max-width: 1150px;
+    padding : 20px;
+}
+
+.products{
+    padding: 10px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    background-color: blanchedalmond;
+}
+
+.products img{
+    width: 100%;
+    display: block;
+    max-height: 300px;
+}
+
+.products .title{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: blue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.products .description{
+    padding: 0 20px 20px 20px;
+    line-height: 22px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.products .price{
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    color: red;
+    padding-top: 30px;
+}
+
+.products .category{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.category{
+   font-size: 24px;
+   color: red;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
