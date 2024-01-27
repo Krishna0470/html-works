@@ -4,8 +4,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fetch ecommerce api</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
+    
+
+<nav id="navbar">
+    <div id="navbar-container">
+      <div id="navbar-logo">
+        <a href="/">
+          <h2 class="logo"><img src="img/shoping.jpg" alt=""> PRODUCT</h2>
+        </a>
+      </div>
+      <form id="navbar-search" action="/search" method="get">
+        <input type="text" name="q" placeholder="Search...">
+        <button type="submit">
+          <span class="material-symbols-outlined">
+            search
+          </span>
+        </button>
+      </form>
+    </div>
+  </nav>
     <div class="product"></div>
     <script src="scripts/script.js"></script>
 </body>

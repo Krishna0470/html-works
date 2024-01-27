@@ -1,3 +1,4 @@
+
 let http = new XMLHttpRequest();
 
 http.open('get','https://fakestoreapi.com/products',true);
