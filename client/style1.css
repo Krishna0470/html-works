@@ -276,3 +276,93 @@
   h4{
     color: #8a8a8a;
   }
+.img2{
+  width: 26%;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  margin-left: 155px;
+}
+
+.container-fluid1 {
+  background-image: url(img/bg1.avif);
+  display: grid;
+  grid-template-areas: 'play stor2';
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.about{
+  margin-top: 40px;
+  border-bottom: #908484 solid;
+  margin-bottom: 30px;
+}
+
+.pa{
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.container_1{
+  display: grid;
+  grid-template-areas: 'im1 im2 im3 im4 im5' ;
+  margin-top: 30px;
+  justify-content: space-evenly;
+  margin-left: 50px;
+}
+
+.img3{
+  border-radius: 50%;
+  width: 50%;
+}
+
+.container-fluid2{
+  background-image: url(img/bg2.avif);
+  display: grid;
+  grid-template-areas: 'play stor2';
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.int_bg{
+  margin-top: 100px;
+}
+
+.img_9{
+  width: 100%;
+}
+
+.img4{
+  border-radius: 5%;
+  width: 80%;
+  height: 100%;
+}
+
+.events{
+  margin-left: 70px;
+  margin-top: 70px;
+}
+
+.container-fluid3{
+  background-image: url(img/bg3.avif);
+  display: grid;
+  grid-template-areas: 'play stor2';
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-fluid4{
+  background-image: url(img/bg4.avif);
+  display: grid;
+  grid-template-areas: 'play stor2';
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-fluid5{
+  background-image: url(img/bg5.avif);
+  display: grid;
+  grid-template-areas: 'play stor2';
+  background-repeat: no-repeat;
+  background-size: cover;
+}
