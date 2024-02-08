@@ -5,16 +5,12 @@ dotenv.config();
 const connect = require('./db/config');
 const movieRoutes = require('./routes/movieRoutes');
 
-
 app.use(express.static(__dirname + '/../client'));
 
+
 app.use(express.json());
-
-
 app.use(express.urlencoded({extended : false}));
 app.use(movieRoutes);
-
-
 
 
 connect();

@@ -7,8 +7,12 @@ const error_function = require('../utils/response-handler').error_function;
 async function createMovie(req, res) {
     try {
         let moviename = req.body.moviename;
-        let movietype = req.body.movietype;
-        
+        let language = req.body.language;
+        let genre = req.body.genre;
+        let runtime = req.body.runtime;
+        let certification = req.body.certification;
+        let releasedate = req.body.releasedate;
+        let aboutmovie = req.body.aboutmovie;
         
         //validate
         let movieFound = await movies.findOne({moviename});
@@ -32,14 +36,24 @@ async function createMovie(req, res) {
         
         let new_movie = await movies.create({
             moviename,
-            movietype,
+            language,
+            genre,
+            runtime,
+            certification,
+            releasedate,
+            aboutmovie,
         });
 
         if (new_movie) {
             let response_datas = {
                 _id : new_movie.id,
                 moviename : new_movie.moviename,
-                movietype : new_movie.movietype,
+                language : new_movie.language,
+                genre : new_movie.genre,
+                runtime : new_movie.runtime,
+                certification : new_movie.certification,
+                releasedate : new_movie.releasedate,
+                aboutmovie : new_movie.aboutmovie
             }
             console.log("new_movie : ", new_movie);
             let response = success_function({

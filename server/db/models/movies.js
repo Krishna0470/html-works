@@ -6,9 +6,30 @@ const movies = new mongoose.Schema({
         required : true,
         unique : true
     },
-    movietype : {
+    language : {
         type : String,
         required : true
+    },
+    genre : {
+        type : String,
+        required : true
+    },
+    runtime : {
+        type : String,
+        required : true
+    },
+    certification : {
+        type : String,
+        required : true
+    },
+    releasedate : {
+        type : String,
+        required : true
+    },
+    aboutmovie : {
+        type : String,
+        required : true,
+        unique : true
     }
 });
 

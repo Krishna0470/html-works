@@ -277,14 +277,14 @@
     color: #8a8a8a;
   }
 .img2{
-  width: 26%;
+  width: 40%;
   margin-top: 30px;
   margin-bottom: 40px;
-  margin-left: 155px;
+  margin-left: 180px;
 }
 
 .container-fluid1 {
-  background-image: url(img/bg1.avif);
+  background-image: url(/img/bg1.avif);
   display: grid;
   grid-template-areas: 'play stor2';
   background-repeat: no-repeat;
@@ -317,7 +317,7 @@
 }
 
 .container-fluid2{
-  background-image: url(img/bg2.avif);
+  background-image: url(/img/bg2.avif);
   display: grid;
   grid-template-areas: 'play stor2';
   background-repeat: no-repeat;
@@ -344,7 +344,7 @@
 }
 
 .container-fluid3{
-  background-image: url(img/bg3.avif);
+  background-image: url(/img/bg3.avif);
   display: grid;
   grid-template-areas: 'play stor2';
   background-repeat: no-repeat;
@@ -352,7 +352,7 @@
 }
 
 .container-fluid4{
-  background-image: url(img/bg4.avif);
+  background-image: url(/img/bg4.avif);
   display: grid;
   grid-template-areas: 'play stor2';
   background-repeat: no-repeat;
@@ -360,9 +360,36 @@
 }
 
 .container-fluid5{
-  background-image: url(img/bg5.avif);
+  background-image: url(/img/bg5.avif);
   display: grid;
   grid-template-areas: 'play stor2';
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.moviess{
+  margin-top: 10%;
+  text-align: start;
+  margin-right: 100px;
+  color: white;
+  font-size: 20px;
+}
+
+.container-fluid6{
+  background-image: url(/img/bg_col.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 60px;
+  padding-bottom: 90px;
+  padding-top: 30px;
+}
+
+.img_icon{
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.colo{
+  color: white;
+  margin-left: 20px;
 }
