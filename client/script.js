@@ -158,6 +158,7 @@ async function handleSave(id) {
         alert("Updation Failed");
     }
 
+    getData();
 }
 
 function validatefirstName() {

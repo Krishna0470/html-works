@@ -44,7 +44,7 @@ exports.login = async function (req,res) {
                 if (auth === true) {
 
                     //openssl genpkey -algorithm RSA -outprivate_key.pem -aes256
-                let access_token = jwt.sign({user_id : user.user_id},process.env.PRIVATE_KEY,{expiresIn : "1d"});
+                let access_token = jwt.sign({user_id : user._id},process.env.PRIVATE_KEY,{expiresIn : "1d"});
                 console.log("access_token : ", access_token);
 
                 let response = success_function({
