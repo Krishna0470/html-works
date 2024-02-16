@@ -1,8 +1,5 @@
 
-
-import Counter from "./components/Counter";
-import Counter1 from "./components/Counter1";
-import Parent from "./components/forms/Parent";
+import Landing from "./components/landing/Landing";
 
 function App() {
 
@@ -10,7 +7,7 @@ function App() {
     <>
     
 
-  <Parent/>
+  <Landing/>
     </>
   
   )
