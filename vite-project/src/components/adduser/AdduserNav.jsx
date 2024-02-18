@@ -1,7 +1,7 @@
 import React from "react";
-import './landing.css';
+import './adduser.css';
 
-function LandingNav({displayData}) {
+function AdduserNav({displayData}) {
     return (
         <>
         <meta charSet="UTF-8" />
@@ -35,12 +35,6 @@ function LandingNav({displayData}) {
         <li>
           <a href="#">Contact</a>
         </li>
-        <li>
-          <a href="#"><button>ADMIN LOGIN</button></a>
-        </li>
-        <li>
-          <a href="#"><button>ADD USER</button></a>
-        </li>
       </ul>
       <h1 className="logo">ORIGINAL</h1>
     </div>
@@ -49,4 +43,4 @@ function LandingNav({displayData}) {
     )
 }
 
-export default LandingNav;
+export default AdduserNav;
