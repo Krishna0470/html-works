@@ -8,6 +8,7 @@ function Adduserpage() {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <form>
+    <h2 className="heading">Add user</h2>
   <label htmlFor="first_name">First Name:</label>
   <input type="text" id="first_name" name="first_name" required="" />
   <label htmlFor="last_name">Last Name:</label>

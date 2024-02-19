@@ -1,5 +1,7 @@
 import React from "react";
 import './landing.css';
+import {Link} from "react-router-dom";
+import Adminlogin from "../adminlogin/Adminlogin";
 
 function LandingNav({displayData}) {
     return (
@@ -36,10 +38,10 @@ function LandingNav({displayData}) {
           <a href="#">Contact</a>
         </li>
         <li>
-          <a href="#"><button>ADMIN LOGIN</button></a>
+         <Link to={'/Adminlogin'}> <button>ADMIN LOGIN</button></Link>
         </li>
         <li>
-          <a href="#"><button>ADD USER</button></a>
+          <Link to={'/Adduser'}><button>ADD USER</button></Link>
         </li>
       </ul>
       <h1 className="logo">ORIGINAL</h1>

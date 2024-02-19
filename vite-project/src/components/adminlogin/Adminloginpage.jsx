@@ -8,7 +8,8 @@ function Adminloginpage() {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="style.css" />
-  <form>
+  <form >
+    <h2 className="heading">Admin login</h2>
     <label htmlFor="email">Admin Name:</label>
     <input type="email" id="login_email" name="login_email" required="" />
     <label htmlFor="password">Password:</label>
@@ -18,7 +19,7 @@ function Adminloginpage() {
       name="login_password"
       required=""
     />
-    <button type="button" onclick="login()">
+    <button className="but_admin" type="button" onClick="login()">
       SUBMIT
     </button>
   </form>
