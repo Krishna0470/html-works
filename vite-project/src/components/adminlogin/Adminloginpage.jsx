@@ -19,7 +19,7 @@ function Adminloginpage() {
       name="login_password"
       required=""
     />
-    <button className="but_admin" type="button" onClick="login()">
+    <button  onClick="handleClick"  className="but_admin" type="button" onClick="login()">
       SUBMIT
     </button>
   </form>

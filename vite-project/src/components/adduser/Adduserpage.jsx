@@ -22,7 +22,7 @@ function Adduserpage() {
       name="login_password"
       required=""
     />
-    <button className="but_user" type="button" onclick="login()">
+    <button  onClick="handleClick"  className="but_user" type="button" onclick="login()">
       SUBMIT
     </button>
   </form>
