@@ -52,3 +52,8 @@ table,tr,th,td{
     font-size: 30px;
     background-color: bisque;
 }
+
+.but_logout{
+    margin-left: 45%;
+    margin-top: 20px;
+}

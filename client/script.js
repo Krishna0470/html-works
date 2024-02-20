@@ -143,7 +143,7 @@ async function handleSave(id) {
 
     let response = await fetch('/editData',{
         method : 'PUT',
-        Headers : {
+        headers : {
             "Content-Type" : "application/json",
         },
         body : jsonData,
@@ -282,4 +282,10 @@ async function login() {
         alert(parsed_response.message);
         return;
     }
+}
+
+function LogOut() {
+    localStorage.removeItem('token');
+    window.location.href = "login.html";
+    return;
 }
