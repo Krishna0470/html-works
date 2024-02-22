@@ -11,7 +11,9 @@
 // import MyComponent from "./components/pure_components/MyComponent";
 // import BrowserRouter from "./components/routing/BasicRouting/BasicRouting";
 // import NestedRouting from "./components/routing/NestedRouting/NestedRouting";
-import UseCallbackComponent from "./components/hooks/UseCallbackComponent";
+// import UseCallbackComponent from "./components/hooks/UseCallbackComponent";
+// import UseContextApp from "./components/hooks/useContext/UseContextApp";
+import UseContextComponent from "./components/hooks/useContext/UserContextComponent";
 
 
 function App() {
@@ -31,10 +33,10 @@ function App() {
   {/* <MyComponent name="hellooo"/> */}
   {/* <ParentComponent/> */}
   {/* <BrowserRouter/> */}
-
   {/* <NestedRouting/> */}
-
-  <UseCallbackComponent/>
+  {/* <UseCallbackComponent/> */}
+  {/* <UseContextApp/> */}
+  <UseContextComponent/>
     </>
   
   )
