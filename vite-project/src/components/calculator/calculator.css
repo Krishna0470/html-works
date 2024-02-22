@@ -44,4 +44,16 @@
   .buttons button:active {
     background-color: #ccc;
   }
+
+  .context{
+    margin-left: 43%;
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 10px;
+  }
+
+  .context1{
+    padding: 10px;
+    background-color: pink;
+  }
   
